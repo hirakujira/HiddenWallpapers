@@ -15,8 +15,8 @@ static NSArray * _logos_meta_method$_ungrouped$Bokeh$presetWallpaperOptions(Clas
             @{@"bokehVariant": @"Blue_T_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehBlue_T_thumb", @"thumbnailImageName": @"BokehBlue_T_thumb"},
             @{@"bokehVariant": @"Green_T_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehGreen_T_thumb", @"thumbnailImageName": @"BokehGreen_T_thumb"},
             @{@"bokehVariant": @"Pink_T_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehPink_T_thumb", @"thumbnailImageName": @"BokehPink_T_thumb"},
-            @{@"bokehVariant": @"Red_T_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehRed_T_thumb", @"thumbnailImageName": @"BokehRed_T_thumb"}];
-    
+            @{@"bokehVariant": @"Red_T_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehRed_T_thumb", @"thumbnailImageName": @"BokehRed_T_thumb"},
+			@{@"bokehVariant": @"Rainbow", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehRainbow_thumb", @"thumbnailImageName": @"BokehRainbow_thumb"}]; //Set "bokehVariant" to any undefined string to get "Rainbow" effect
 }
 
 
