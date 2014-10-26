@@ -11,7 +11,6 @@ static NSArray * _logos_meta_method$_ungrouped$Bokeh$presetWallpaperOptions(Clas
             @{@"bokehVariant": @"Silver_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehSilver_thumb", @"thumbnailImageName": @"BokehSilver_thumb"},
             @{@"bokehVariant": @"BokehGradient", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehGradient_thumb", @"thumbnailImageName": @"BokehGradient_thumb"},
             @{@"bokehVariant": @"BokehGradientSilver", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehGradientSilver_thumb", @"thumbnailImageName": @"BokehGradientSilver_thumb"},
-            @{@"bokehVariant": @"Rainbow", @"kSBUIMagicWallpaperThumbnailNameKey": @"", @"thumbnailImageName": @""},
             @{@"bokehVariant": @"Blue_T_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehBlue_T_thumb", @"thumbnailImageName": @"BokehBlue_T_thumb"},
             @{@"bokehVariant": @"Green_T_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehGreen_T_thumb", @"thumbnailImageName": @"BokehGreen_T_thumb"},
             @{@"bokehVariant": @"Pink_T_v01", @"kSBUIMagicWallpaperThumbnailNameKey": @"BokehPink_T_thumb", @"thumbnailImageName": @"BokehPink_T_thumb"},
@@ -23,13 +22,14 @@ static NSArray * _logos_meta_method$_ungrouped$Bokeh$presetWallpaperOptions(Clas
 %hook NSBundle
 + (NSBundle *)bundleWithPath:(NSString *)path
 {
-    if ([[%orig bundleIdentifier] isEqualToString:@"com.apple.ProceduralWallpapers"]) {
+    NSBundle* wallpaperBundle = %orig;
+    if ([[wallpaperBundle bundleIdentifier] isEqualToString:@"com.apple.ProceduralWallpapers"]) {
         Class WKInfiniteImpulseResponseFilter = [%orig principalClass];
         Class _logos_class$_ungrouped$Bokeh = objc_getClass("Bokeh"); 
         Class _logos_metaclass$_ungrouped$Bokeh = object_getClass(_logos_class$_ungrouped$Bokeh);
         MSHookMessageEx(_logos_metaclass$_ungrouped$Bokeh, @selector(presetWallpaperOptions), (IMP)&_logos_meta_method$_ungrouped$Bokeh$presetWallpaperOptions, (IMP*)&_logos_meta_orig$_ungrouped$Bokeh$presetWallpaperOptions);
     }
-    return %orig;
+    return wallpaperBundle;
 }
 %end
 
