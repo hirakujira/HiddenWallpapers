@@ -3,7 +3,7 @@ Priority: optional
 Section: Tweaks
 Maintainer: Hiraku/kinda <dev@hiraku.tw>
 Architecture: iphoneos-arm
-Version: 1.0.4
+Version: 1.0.5
 Description: Enable hidden wallpapers in iOS 7
 Name: HiddenWallpapers
 Depends: mobilesubstrate, firmware (>= 7.0)
